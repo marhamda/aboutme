@@ -1,0 +1,84 @@
+
+@padding:5%;
+@width:95%;
+@radius:10px;
+
+
+
+.setBackground {
+	border-radius: @radius;
+	background:#F6CEE3;
+	opacity:0.9
+}
+
+.changeWidth(@int){
+	width:(@width - @int);
+}
+
+.setFont(@a) when (lightness(@a) > 50%) {
+	color:@a;	
+}
+
+.setFont(@a) when (lightness(@a) < 50%) {
+	color:#2B1B17
+}
+
+a {
+.setFont(#330033);
+text-decoration: none;
+font-weight:bold;
+}
+
+a:hover {
+.setFont(#FBBBB9);
+}
+
+ body{ 
+	background:url("background.jpg");
+	.setFont(#2B1B17);
+	font:Cambria;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+	padding:@padding;
+}
+
+.nav {
+	.setBackground;
+	padding:@padding;
+
+}
+
+.intro {
+	.setBackground;
+}
+
+.figure img {
+display:block;
+border-radius: @radius;
+}
+
+.inner {
+ 	margin: 0 auto;
+ 	width:@width;
+ } 
+
+.main {
+ 	float:right;
+ 	.setBackground;
+ 	.changeWidth(40%);
+ 	margin-top:150px;
+ }
+
+.innerMain{
+	.setBackground;
+  	float:left;
+ }
+
+.mast{
+ 	float:left;
+ 	.changeWidth(60%);
+}
+
+.intro {
+	margin-top: 130px;
+	float:left;
+}
